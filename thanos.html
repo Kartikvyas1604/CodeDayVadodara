@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Scene with GLTF Model</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      .navbar button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <a-scene>
+        <a-gltf-model
+          src="thanos_textured_rigged.glb"
+        ></a-gltf-model>
+      </a-scene>
+    </a-scene>
+    <div class="navbar">
+      <button onclick="openPage('spiderman.html')">Spiderman</button>
+      <button onclick="openPage('ironman.html')">Ironman</button>
+      <button onclick="openPage('thanos.html')">Thanos</button>
+      <button onclick="openPage('superhero.html')">Superman</button>
+    </div>
+  </body>
+  <script>
+    function openPage(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+</html>
